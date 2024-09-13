@@ -1,0 +1,36 @@
+﻿@{
+    ViewData["Title"] = "Agregar Empleado";
+
+}
+
+@model Inventario.Models.Empleado
+
+<div class="container mt-5">
+    <h1 class="mb-4">Agregar Empleado</h1>
+</div>
+
+<div class="card mb-4 mx-4">
+    <div class="card-body">
+        <form asp-action="agregarEmpleado" asp-controller="Empleados" method="post">
+            <div class="mb-3">
+                <label for="nombreEmpleado" class="form-label">Nombre</label>
+                <input type="text" class="form-control" id="nombreEmpleado" placeholder="Nombre" asp-for="Nombre" />
+            </div>
+            <div class="mb-3">
+                <label for="cargoEmpleado" class="form-label">Cargo</label>
+                <input type="text" class="form-control" id="cargoEmpleado" placeholder="Cargo" asp-for="Cargo" />
+            </div>
+            <div class="mb-3">
+                <label for="departamentoE" class="form-label">Departamento</label>
+                <input type="text" class="form-control" id="departamentoE" placeholder="Departamento" asp-for="Departamento" />
+            </div>
+            <div class="mb-3">
+                <label for="fechaC" class="form-label">fechaContratacion</label>
+                <input type="text" class="form-control" id="fechaC" placeholder="Fecha de contratación" asp-for="fechaContratacion" />
+            </div>
+            <div class="mb-3">
+                <button class="btn btn-primary" type="submit">Registrar Empleado</button>
+            </div>
+        </form>
+    </div>
+</div>

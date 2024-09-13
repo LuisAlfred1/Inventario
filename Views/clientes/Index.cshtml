@@ -1,0 +1,32 @@
+﻿@{
+    ViewData["Title"] = "Clientes";
+
+}
+
+<div class="mb-3 text-end">
+    <a asp-controller="Clientes" asp-action="agregarCliente" class="btn btn-primary">Agregar cliente</a>
+</div>
+
+<h1>Clientes</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Nombre</th>
+            <th>Email</th>
+            <th>Telefono</th>
+        </tr>
+    </thead>
+    <tbody class="table-group-divider">
+        @foreach (var cliente in Model)
+        {
+            <tr>
+                <td>@cliente.Id</td>
+                <td>@cliente.Nombre</td>
+                <td>@cliente.Email</td>
+                <td>@cliente.Telefono</td>
+            </tr>
+        }
+    </tbody>
+</table>

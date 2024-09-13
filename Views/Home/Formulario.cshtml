@@ -1,0 +1,39 @@
+﻿﻿@{
+    ViewData["Title"] = "Interactividad con Javascript";
+}
+
+<div class="container mt-5">
+    <h1 class="mb-4">Interactividad con Javascript</h1>
+</div>
+
+<!-- Formulario de Operacion -->
+<div class="card mb-4 mx-4">
+    <div class="card-header">
+        <h2>Ingresa tu operación</h2>
+    </div>
+    <div class="card-body">
+        <form id="formularioOperacion" onsubmit="return false">
+            <div class="mb-3">
+                <label for="selectorOperacion" class="form-label">Seleccione la operacion a realizar</label>
+                <select class="form-select" id="selectorOperacion">
+                    <option value="SUMA" selected>Suma</option>
+                    <option value="RESTA">Resta</option>
+                </select>
+            </div>
+            <div class="mb-3">
+                <label for="primerNumero" class="form-label">Primer Número</label>
+                <input type="number" class="form-control" id="primerNumero" placeholder="Ingresa el número que desees" />
+            </div>
+            <div class="mb-3">
+                <label for="segundoNumero" class="form-label">Segundo Número</label>
+                <input type="number" class="form-control" id="segundoNumero" placeholder="Ingresa el número que desees" />
+            </div>
+            <div class="mb-3">
+                <button class="btn btn-primary" id="botonRealizarOperacion">Realizar Operación</button>
+            </div>
+            <div class="mb-3">
+                <p>El resultado de la operacion es: <strong id="resultado"></strong></p>
+            </div>
+        </form>
+    </div>
+</div>

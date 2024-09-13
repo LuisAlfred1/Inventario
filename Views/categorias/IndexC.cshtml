@@ -1,0 +1,30 @@
+﻿@{
+    ViewData["Title"] = "Categorias";
+
+}
+
+<div class="mb-3 text-end">
+    <a asp-controller="Categorias" asp-action="agregarCategoria" class="btn btn-primary">Agregar Categoria</a>
+</div>
+
+<h1>Categorias</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Nombre</th>
+            <th>Descripcion</th>
+        </tr>
+    </thead>
+    <tbody class="table-group-divider">
+        @foreach (var categoria in Model)
+        {
+            <tr>
+                <td>@categoria.Id</td>
+                <td>@categoria.Nombre</td>
+                <td>@categoria.Descripcion</td>
+            </tr>
+        }
+    </tbody>
+</table>

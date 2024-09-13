@@ -1,0 +1,30 @@
+﻿@{
+    ViewData["Title"] = "Marcas";
+
+}
+
+<div class="mb-3 text-end">
+    <a asp-controller="Marcas" asp-action="agregarMarca" class="btn btn-primary">Agregar Marca</a>
+</div>
+
+<h1>Marcas</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Nombre</th>
+            <th>Pais de origen</th>
+        </tr>
+    </thead>
+    <tbody class="table-group-divider">
+        @foreach (var marca in Model)
+        {
+            <tr>
+                <td>@marca.Id</td>
+                <td>@marca.Nombre</td>
+                <td>@marca.PaisOrigen</td>
+            </tr>
+        }
+    </tbody>
+</table>

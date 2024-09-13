@@ -1,0 +1,28 @@
+﻿@{
+    ViewData["Title"] = "Agregar Categoria";
+
+}
+
+@model Inventario.Models.Categoria
+
+<div class="container mt-5">
+    <h1 class="mb-4">Agregar Categoria</h1>
+</div>
+
+<div class="card mb-4 mx-4">
+    <div class="card-body">
+        <form asp-action="agregarCategoria" asp-controller="Categorias" method="post">
+            <div class="mb-3">
+                <label for="nombreCategoria" class="form-label">Nombre</label>
+                <input type="text" class="form-control" id="nombreMarca" placeholder="Nombre" asp-for="Nombre" />
+            </div>
+            <div class="mb-3">
+                <label for="DescripcionCategoria" class="form-label">Descripcion</label>
+                <input type="text" class="form-control" id="paisOrigen" placeholder="Descripción" asp-for="Descripcion" />
+            </div>
+            <div class="mb-3">
+                <button class="btn btn-primary" type="submit">Registrar Categoria</button>
+            </div>
+        </form>
+    </div>
+</div>
